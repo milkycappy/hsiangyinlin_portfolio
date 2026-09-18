@@ -265,8 +265,8 @@ figcaption { padding-top: 10px; color: var(--muted); font-size: .88rem; }
 }
 
 .reel-image {
-  width: 100%;
-  margin-top: 18px;
+  width: 120%;
+  margin-top: 34px;
 }
 
 .likeness-grid img:last-child {
