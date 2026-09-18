@@ -268,3 +268,10 @@ figcaption { padding-top: 10px; color: var(--muted); font-size: .88rem; }
   width: 100%;
   margin-top: 18px;
 }
+
+.likeness-grid img:last-child {
+  grid-column: 1 / -1;
+  aspect-ratio: 2.04;
+  object-fit: contain;
+  background: none;
+}
