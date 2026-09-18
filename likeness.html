@@ -32,5 +32,43 @@
       <img src="" alt="">
     </dialog>
   </main>
+  <script>
+  const lightbox = document.querySelector('.image-lightbox');
+  const largeImage = lightbox.querySelector('img');
+  const closeButton = lightbox.querySelector('.lightbox-close');
+  let lastFocusedImage;
+
+  document.querySelectorAll('.likeness-grid img').forEach((image) => {
+    image.tabIndex = 0;
+    image.setAttribute('role', 'button');
+    image.setAttribute('aria-label', `View larger image: ${image.alt}`);
+
+    function openImage() {
+      lastFocusedImage = image;
+      largeImage.src = image.src;
+      largeImage.alt = image.alt;
+      lightbox.showModal();
+    }
+
+    image.addEventListener('click', openImage);
+    image.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openImage();
+      }
+    });
+  });
+
+  closeButton.addEventListener('click', () => lightbox.close());
+
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) lightbox.close();
+  });
+
+  lightbox.addEventListener('close', () => {
+    largeImage.removeAttribute('src');
+    lastFocusedImage?.focus();
+  });
+</script>
 </body>
 </html>
