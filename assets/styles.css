@@ -266,6 +266,7 @@ figcaption { padding-top: 10px; color: var(--muted); font-size: .88rem; }
 
 .reel-image {
   width: 120%;
+  max-width: none;
   margin-top: 34px;
 }
 
