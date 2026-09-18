@@ -263,3 +263,8 @@ figcaption { padding-top: 10px; color: var(--muted); font-size: .88rem; }
   .project-card { min-height: 58vh; }
   .project-heading h1 { font-size: 3.6rem; }
 }
+
+.reel-image {
+  width: 100%;
+  margin-top: 18px;
+}
