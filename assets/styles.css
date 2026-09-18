@@ -285,3 +285,51 @@ figcaption { padding-top: 10px; color: var(--muted); font-size: .88rem; }
   max-width: calc(100vw - 32px);
   height: auto;
 }
+
+.likeness-grid img {
+  cursor: zoom-in;
+}
+
+.likeness-grid img:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.image-lightbox {
+  position: fixed;
+  max-width: 95vw;
+  max-height: 95vh;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.image-lightbox::backdrop {
+  background: rgb(0 0 0 / 85%);
+}
+
+.image-lightbox img {
+  display: block;
+  max-width: 95vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(0 0 0 / 75%);
+  color: white;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
